@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JawsAG - Home</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .main-content {
+            text-align: center;
+            margin-top: 50px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .neon-title {
+            font-family: 'Graffiti City', sans-serif; /* Applying custom font */
+            font-size: 2em;
+            color: #fff;
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ffffff, 0 0 35px #ffffff, 0 0 40px #ffffff;
+        } image-grid {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .image-grid img {
+            width: 200px; /* Adjust the width as needed */
+            height: 200px; /* Adjust the height as needed */
+            object-fit: cover; /* Preserve aspect ratio */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <h2 class="neon-title">JawsAG</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <!-- Other navigation links will be accessible only after entering the password -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container main-content">
+        <h1>Welcome</h1>
+        <p>If ur here that means I gave you the password or you some how found it out.</p>
+    </div>
+    <div class="image-grid">
+        <img src="jawszoidplays.jpg" alt="Image 1">
+        <img src="jawszoidplays.png" alt="Image 2">
+        <img src="jawszoidplaysnoantlers-removebg-preview (3).png" alt="Image 3">
+        <img src="jawszoidplaysnoantlers.png" alt="Image 4">
+    </div>
+    <footer>
+        <div class="container">
+            <p>2024 JawsAG Inc. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Check if the user has already entered the correct password
+        const enteredPassword = sessionStorage.getItem("enteredPassword");
+
+        if (!enteredPassword) {
+            // If the password has not been entered, prompt the user for it
+            const correctPassword = "jawsag"; // Change this to your desired password
+            const userInput = prompt("Please enter the password to access the website:");
+            
+            if (userInput === correctPassword) {
+                // If the password is correct, store a flag indicating it in session storage
+                sessionStorage.setItem("enteredPassword", userInput);
+            } else {
+                // If the password is incorrect, redirect back to the index page
+                alert("Incorrect password. You will be redirected to somewhere >:).");
+                window.location.href = "WhereAmI.html";
+            }
+        }
+    </script>
+</body>
+</html>

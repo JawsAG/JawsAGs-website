@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JawsAG - Services</title>
+    <!-- Same styles as index.html -->
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .service {
+            margin-bottom: 20px;
+        }
+        .neon-title {
+            font-family: 'Graffiti City', sans-serif; /* Applying custom font */
+            font-size: 2em;
+            color: #fff;
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ffffff, 0 0 35px #ffffff, 0 0 40px #ffffff;
+        }
+        .service p {
+            margin-bottom: 10px;
+        }
+        /* Add more styles as needed */
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <h2 class="neon-title">JawsAG</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="service">
+            <h1>This is text</h1>
+            <p>Click the button to copy the text to the clipboard:</p>
+            <button onclick="copyText()">
+                <img src="copy.png" alt="Copy Text">
+            </button>
+        </div>
+        <div class="service">
+            <h1>This is text</h1>
+            <p>Click the button to download the file:</p>
+            <a href="download/sample_file.txt" download>
+                <button>
+                    <img src="download.png" alt="Download File">
+                </button>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 JawsAG. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function copyText() {
+            const textToCopy = "This is the text you want to copy.";
+            navigator.clipboard.writeText(textToCopy);
+            alert("Text copied to clipboard!");
+        }
+    </script>
+</body>
+</html>
